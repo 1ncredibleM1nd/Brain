@@ -1,0 +1,10 @@
+import "./logo.svg";
+import "./documents-icon.svg";
+import "./finances-icon.svg";
+import "./help-icon.svg";
+import "./projects-icon.svg";
+import "./notifications-icon.svg";
+import "./settings-icon.svg";
+import "./user-icon.svg";
+import "./arrow-icon.svg";
+import "./calendar-icon.svg";

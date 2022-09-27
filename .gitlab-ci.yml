@@ -1,0 +1,57 @@
+variables:
+  APP_NAME: "papabot-statistics"
+  DEV_HOST: "admin@84.201.139.43"
+  STAGE_HOST: "admin@84.201.139.43"
+  RELEASE_ROOT: "/home/admin/web/${APP_NAME}/${CI_ENVIRONMENT_NAME}"
+
+.base_deploy:
+  script:
+    - |
+      export NVM_DIR="$HOME/.nvm"
+      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+      npm i && npm run build -- --mode development --env development
+      ls -al dist/
+    - RELEASES_DIR="${RELEASE_ROOT}/releases"
+    - CURRENT_RELEASE="$RELEASES_DIR/$(date +%F-%s)"
+    - echo $CURRENT_RELEASE
+    - ssh "$TARGET_HOST" "mkdir -p $CURRENT_RELEASE"
+    - rsync -a dist/ "$TARGET_HOST:$CURRENT_RELEASE/"
+    - ssh "$TARGET_HOST" "ln -sfn $CURRENT_RELEASE $RELEASE_ROOT/current"
+    - echo Check out deployment url $CI_ENVIRONMENT_URL
+
+deploy to dev:
+  stage: deploy
+  extends:
+    - .base_deploy
+  variables:
+    TARGET_HOST: "${DEV_HOST}"
+  environment:
+    name: dev
+    url: "https://${APP_NAME}.${CI_ENVIRONMENT_NAME}.prodamus.pro"
+  only:
+    - dev
+  when: manual
+
+deploy to stage:
+  stage: deploy
+  extends:
+    - .base_deploy
+  variables:
+    TARGET_HOST: "${STAGE_HOST}"
+  environment:
+    name: stage
+    url: "https://${APP_NAME}.${CI_ENVIRONMENT_NAME}.prodamus.pro"
+  only:
+    - /^[0-9.].*$/
+  when: manual
+
+deploy to prod:
+  stage: deploy
+  only:
+    - /^v[\d\.]+$/
+  script:
+    - sshpass ssh -t prodamus@10.130.0.4  "cd /var/www/papabot-statistics.ru/frontend &&
+      git fetch --tags &&
+      git checkout -f tags/$CI_COMMIT_TAG &&
+      npm ci && npm run build -- --env production &&
+      rm -rf build && mv dist build"
