@@ -8,3 +8,5 @@ import "./settings-icon.svg";
 import "./user-icon.svg";
 import "./arrow-icon.svg";
 import "./calendar-icon.svg";
+import "./freelancers-icon.svg";
+import "./messages-icon.svg";

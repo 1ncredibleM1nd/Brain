@@ -1,5 +1,5 @@
 import React from "react";
 
-export const Freelancers = () => {
-  return <h1>Freelancers</h1>;
+export const Notifications = () => {
+  return <h1>Notifications</h1>;
 };
