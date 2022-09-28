@@ -4,56 +4,30 @@ import { Icon } from "@/ui/Icon";
 import { Link } from "react-router-dom";
 import { Tab } from "@/components/LeftSidebar/Tab";
 
-const Links = [
-  {
-    identifier: "projects",
-    name: "Проекты",
-  },
-  {
-    identifier: "messages",
-    name: "Сообщения",
-  },
-  {
-    identifier: "freelancers",
-    name: "Фрилансеры",
-  },
-  {
-    identifier: "notifications",
-    name: "Уведомления",
-  },
-  {
-    identifier: "documents",
-    name: "Документы",
-  },
-  {
-    identifier: "user",
-    name: "Личные данные",
-  },
-  {
-    identifier: "finances",
-    name: "Финансы",
-  },
-  {
-    identifier: "settings",
-    name: "Настройки",
-  },
-  {
-    identifier: "help",
-    name: "Помощь",
-  },
-];
+type TLink = {
+  identifier: string;
+  name: string;
+};
 
-export const LeftSidebar = () => {
+type TProps = {
+  links: TLink[];
+};
+
+export const LeftSidebar = ({ links }: TProps) => {
+  console.log(links);
   return (
     <Wrapper>
       <Icon name={"logo"} width={145} height={40} />
       <LinksWrapper>
-        {Links.map(link => (
+        {links.map(link => (
           <Link to={`/${link.identifier}`}>
             <Tab link={link} />
           </Link>
         ))}
       </LinksWrapper>
+      <Link to={`/exit`}>
+        <Tab link={{ name: "Выйти", identifier: "exit" }} />
+      </Link>
     </Wrapper>
   );
 };

@@ -4,10 +4,15 @@ import { Palette } from "@/styles/constants";
 export const Wrapper = styled("div")`
   display: flex;
   flex-direction: column;
+  align-items: baseline;
   padding: 28px;
   max-width: 300px;
   height: 100%;
   background: ${Palette.white1};
+
+  & > a {
+    text-decoration: none;
+  }
 `;
 
 export const LinksWrapper = styled("div")`

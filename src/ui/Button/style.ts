@@ -4,7 +4,7 @@ import { ReactChildren, ReactNode } from "react";
 
 type TButtonSize = "sm" | "md";
 type TButtonTextPlacement = "textLeft" | "textRight" | "textCenter";
-type TButtonType = "primary" | "secondary" | "ghost" | "link";
+type TButtonType = "primary" | "secondary";
 type TButtonFit = "cover" | "contain";
 type TButtonShape = "rounded" | "roundedLeft" | "roundedRight" | "square";
 
@@ -24,21 +24,15 @@ export const StyledButton = styled<TProps>("button")`
   align-items: center;
   outline: none !important;
   border: none;
-  transition: color ${Palette.transition},
-    background-color ${Palette.transition};
   line-height: 20px;
   cursor: pointer;
 
-  &:hover {
-    transition: color  ${Palette.transition};,
-  }
-
   ${({ size }) => {
     const sizes = {
-      sm: `  font-size: 12px;
-    padding: 4px 16px;`,
+      sm: `  font-size: 14px;
+             padding: 13px 37px;`,
       md: `  font-size: 14px;
-    padding: 8px 16px;`,
+             padding: 13px 48px;`,
     };
     return sizes[size];
   }}
@@ -55,28 +49,15 @@ export const StyledButton = styled<TProps>("button")`
 
   ${({ type }) => {
     const types = {
-      primary: ` color: ${Palette.white};
-                 background: ${Palette.green1};
+      primary: ` color: ${Palette.white1};
+                 background: ${Palette.violet};
                  &:hover {
-                   background: ${Palette.green2};}`,
-      secondary: `color: ${Palette.black};
-                  background: ${Palette.gray7};
+                   background: ${Palette.violet};}`,
+      secondary: `color: ${Palette.violet};
+                  background: ${Palette.white1};
+                  border: 1px solid ${Palette.violet};
                    &:hover {
-                     background: ${Palette.gray2};}`,
-      ghost: `background: none;
-              color: ${Palette.black};
-               &:hover {
-                 background: ${Palette.gray2};
-              }`,
-      link: `  color: ${Palette.black};
-               position: relative;
-               background: none;
-               padding: 0;
-               min-width: auto;
-
-              &:hover {
-                color: ${Palette.green2};
-              }`,
+                     background: ${Palette.white2};}`,
     };
     return types[type];
   }}
@@ -95,13 +76,14 @@ export const StyledButton = styled<TProps>("button")`
                      border-bottom-right-radius: 8px;`,
       roundedLeft: `border-top-left-radius: 8px;
                     border-bottom-left-radius: 8px;`,
-      rounded: `border-radius: 18px;`,
+      rounded: `border-radius: 10px;`,
       square: `border-radius: 0;`,
     };
     return shapes[shape];
   }}
 
   &:disabled {
+    color: ${Palette.disabled};
     cursor: default;
   }
 `;

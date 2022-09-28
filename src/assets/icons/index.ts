@@ -10,3 +10,4 @@ import "./arrow-icon.svg";
 import "./calendar-icon.svg";
 import "./freelancers-icon.svg";
 import "./messages-icon.svg";
+import "./exit-icon.svg";

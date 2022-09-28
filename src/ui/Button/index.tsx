@@ -1,9 +1,9 @@
-import React, { ReactNode, HTMLProps } from "react";
+import React, { HTMLProps } from "react";
 import { observer } from "mobx-react-lite";
 import { StyledButton } from "@/ui/Button/style";
 
 type TButtonSize = "sm" | "md";
-type TButtonType = "primary" | "secondary" | "link" | "ghost";
+type TButtonType = "primary" | "secondary";
 type TButtonShape = "rounded" | "roundedLeft" | "roundedRight" | "square";
 type TButtonFit = "cover" | "contain";
 type TTextPosition = "textLeft" | "textRight" | "textCenter";
