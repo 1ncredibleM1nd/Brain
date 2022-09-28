@@ -27,6 +27,7 @@ export const StyledButton = styled<TProps>("button")`
   border: none;
   line-height: 20px;
   cursor: pointer;
+  font-weight: bold;
 
   ${({ size }) => {
     const sizes = {

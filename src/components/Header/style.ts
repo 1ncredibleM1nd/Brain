@@ -20,6 +20,7 @@ export const ActionsWrapper = styled("div")`
 `;
 
 export const NotificationWrapper = styled("div")`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,6 +29,21 @@ export const NotificationWrapper = styled("div")`
   cursor: pointer;
   border-radius: 10px;
   padding: 13px;
+`;
+
+export const Counter = styled("span")`
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8px;
+  color: ${Palette.white1};
+  left: 50%;
+  top: 25%;
+  border-radius: 50%;
+  background: ${Palette.violet};
 `;
 
 export const StyledAvatar = styled(Avatar)<{

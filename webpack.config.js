@@ -67,31 +67,6 @@ module.exports = function config(env, { mode }) {
         },
 
         {
-          test: /\.s?css$/,
-          use: [
-            MiniCssExtractPlugin.loader,
-            "css-loader",
-            {
-              loader: "postcss-loader",
-              options: {
-                postcssOptions: {
-                  plugins: [
-                    isProduction &&
-                      require("cssnano")({
-                        preset: [
-                          "default",
-                          { discardComments: { removeAll: true } },
-                        ],
-                      }),
-                  ].filter(Boolean),
-                },
-              },
-            },
-            "sass-loader",
-          ],
-        },
-
-        {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
           include: path.resolve(__dirname, "src/assets/images"),
           type: "asset/resource",
