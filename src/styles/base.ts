@@ -5,34 +5,30 @@ export const GlobalStyles = createGlobalStyles`
   @font-face {
   font-family: "Inter Light";
   font-weight: 300;
-  src: url('../fonts/Inter-Light.eot');
-  src: url('../fonts/Inter-Light.eot#iefix') format('embedded-opentype'),
-  url('../fonts/Inter-Light.woff') format('woff'),
   url('../fonts/Inter-Light.ttf') format('truetype');
 }
 
   @font-face {
     font-family: "Inter Regular";
     font-weight: 400;
-    src: url('../fonts/Inter-Regular.eot');
-    src: url('../fonts/Inter-Regular.eot#iefix') format('embedded-opentype'),
-    url('../fonts/Inter-Regular.woff') format('woff'),
     url('../fonts/Inter-Regular.ttf') format('truetype');
   }
 
   @font-face {
     font-family: "Inter Medium";
     font-weight: 500;
-    src: url('../fonts/Inter-Medium.eot');
-    src: url('../fonts/Inter-Medium.eot#iefix') format('embedded-opentype'),
-    url('../fonts/Inter-Medium.woff') format('woff'),
     url('../fonts/Inter-Medium.ttf') format('truetype');
+  }
+
+  @font-face{
+  font-family: "Inter Bold";
+    font-weight: 600;
+    url('../fonts/Inter-Bold.ttf') format('truetype');
   }
 
    html {
       box-sizing: border-box;
-      font-family: "Inter Regular", sans-serif;
-      font-weight: 300;
+      font-family: "Inter", sans-serif !important;
     }
 
     *,
@@ -43,7 +39,7 @@ export const GlobalStyles = createGlobalStyles`
 
     body {
       margin: 0;
-      background: #F4F5F8;
+      background: #F5F5F5;
     }
 
   //Scroll bar

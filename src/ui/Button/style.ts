@@ -19,6 +19,7 @@ interface TProps {
 }
 
 export const StyledButton = styled<TProps>("button")`
+  font-family: inherit;
   display: flex;
   min-width: 80px;
   align-items: center;

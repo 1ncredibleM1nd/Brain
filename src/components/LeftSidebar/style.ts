@@ -7,12 +7,8 @@ export const Wrapper = styled("div")`
   align-items: baseline;
   padding: 28px;
   max-width: 300px;
-  height: 100%;
+  height: 100vh;
   background: ${Palette.white1};
-
-  & > a {
-    text-decoration: none;
-  }
 `;
 
 export const LinksWrapper = styled("div")`
@@ -21,6 +17,14 @@ export const LinksWrapper = styled("div")`
   flex-direction: column;
 
   & a {
+    text-decoration: none;
+  }
+`;
+
+export const ExitWrapper = styled("div")`
+  margin-top: 220px;
+
+  & > a {
     text-decoration: none;
   }
 `;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper, LinksWrapper } from "./style";
+import { Wrapper, LinksWrapper, ExitWrapper } from "./style";
 import { Icon } from "@/ui/Icon";
 import { Link } from "react-router-dom";
 import { Tab } from "@/components/LeftSidebar/Tab";
@@ -14,7 +14,6 @@ type TProps = {
 };
 
 export const LeftSidebar = ({ links }: TProps) => {
-  console.log(links);
   return (
     <Wrapper>
       <Icon name={"logo"} width={145} height={40} />
@@ -25,9 +24,11 @@ export const LeftSidebar = ({ links }: TProps) => {
           </Link>
         ))}
       </LinksWrapper>
-      <Link to={`/exit`}>
-        <Tab link={{ name: "Выйти", identifier: "exit" }} />
-      </Link>
+      <ExitWrapper>
+        <Link to={`/exit`}>
+          <Tab link={{ name: "Выйти", identifier: "exit" }} />
+        </Link>
+      </ExitWrapper>
     </Wrapper>
   );
 };
