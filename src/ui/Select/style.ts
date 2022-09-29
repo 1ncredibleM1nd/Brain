@@ -50,7 +50,7 @@ export const StyledReactSelect = styled(ReactSelect)`
     }
 
     .Select__placeholder {
-      color: ${Palette.gray5};
+      color: ${Palette.gray2};
     }
 
     .Select__value-container {
@@ -65,15 +65,15 @@ export const StyledReactSelect = styled(ReactSelect)`
         margin-right: 6px;
         margin-bottom: 3px;
         padding: 6px 10px 6px 0;
-        background-color: ${Palette.gray7};
+        background-color: ${Palette.gray2};
 
         .Select__multi-value__remove {
           margin-left: 10px;
-          color: ${Palette.gray4};
+          color: ${Palette.gray2};
 
           &:hover {
             background-color: transparent;
-            color: ${Palette.gray6};
+            color: ${Palette.gray2};
           }
         }
       }

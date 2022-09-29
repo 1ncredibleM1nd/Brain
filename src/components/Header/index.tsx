@@ -1,13 +1,19 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { Icon } from "@/ui/Icon";
 import { Wrapper, ActionsWrapper, NotificationWrapper, Counter } from "./style";
 import { Button } from "@/ui/Button";
 import { User } from "./User/index";
 
 export const Header = () => {
+  let history = useHistory();
+
+  const redirect = () => {
+    history.push("/tasks");
+  };
   return (
     <Wrapper>
-      <Button type="secondary" size="sm" onClick={() => console.log("kek")}>
+      <Button type="secondary" size="sm" onClick={() => redirect()}>
         Создать задачу
       </Button>
       <ActionsWrapper>

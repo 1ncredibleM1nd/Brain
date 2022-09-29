@@ -9,8 +9,6 @@
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
     "@idui/react-popover": "^3.1.0",
     "@types/react-color": "^3.0.6",
     "assert": "^2.0.0",
@@ -29,6 +27,7 @@
     "react-router": "^6.3.0",
     "react-router-dom": "^5.2.0",
     "react-select": "^5.2.2",
+    "react-step-progress-bar": "^1.0.3",
     "recharts": "^2.1.10",
     "reflect-metadata": "^0.1.13",
     "socket.io-client": "^4.1.3",

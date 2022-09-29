@@ -10,6 +10,7 @@ import { Cabinet } from "@/Pages/Cabinet";
 import { Finances } from "@/Pages/Finances";
 import { Settings } from "@/Pages/Settings";
 import { Help } from "@/Pages/Help";
+import { Tasks } from "@/Pages/Tasks";
 
 export const Workspace = () => {
   return (
@@ -41,6 +42,9 @@ export const Workspace = () => {
         </Route>
         <Route path="/help">
           <Help />
+        </Route>
+        <Route path="/tasks">
+          <Tasks />
         </Route>
       </Wrapper>
     </Switch>

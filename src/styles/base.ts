@@ -42,6 +42,13 @@ export const GlobalStyles = createGlobalStyles`
       background: #F5F5F5;
     }
 
+    input[type="text"] {
+       font-family: inherit; /* 1 */
+       font-size: inherit; /* 1 */
+       line-height: inherit; /* 1 */
+       margin: 0; /* 2 */
+    }
+
   //Scroll bar
 
   html.mac:not(.resize)::-webkit-scrollbar-thumb,

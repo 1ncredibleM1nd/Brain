@@ -15,7 +15,7 @@ export type TProps = {
   textPosition?: TTextPosition;
   size?: TButtonSize;
   shape?: TButtonShape;
-  onClick: (ev: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  onClick?: (ev: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 } & Omit<HTMLProps<HTMLButtonElement>, "size">;
 
 export const Button = observer(
