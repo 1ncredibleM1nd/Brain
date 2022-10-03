@@ -6,6 +6,7 @@ export const Palette = {
   gray: "#9197B3",
   grayBlue: "#F8F9FF",
   gray2: "#E5E5EA",
+  gray3: "#D8D8DC",
   disabled: "#D8D8DC",
   error: "#DA001A",
 };

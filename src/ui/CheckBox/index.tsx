@@ -15,7 +15,7 @@ export const CheckBox = observer(
       <CheckBoxWrapper onChange={() => onChange?.(!value)}>
         <Input type="checkbox" defaultChecked={value} />
         <SvgWrapper active={value} onlyIcon={!(label || children)}>
-          {value && <StyledIcon name="check-icon" />}
+          {value && <StyledIcon name="check-icon" width={12} height={10} />}
         </SvgWrapper>
         <Text>{label || children}</Text>
       </CheckBoxWrapper>
