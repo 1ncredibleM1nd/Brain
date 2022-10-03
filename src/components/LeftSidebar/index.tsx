@@ -25,7 +25,7 @@ export const LeftSidebar = ({ links }: TProps) => {
         ))}
       </LinksWrapper>
       <ExitWrapper>
-        <Link to={`/exit`}>
+        <Link to={`/auth`}>
           <Tab link={{ name: "Выйти", identifier: "exit" }} />
         </Link>
       </ExitWrapper>

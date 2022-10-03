@@ -1,10 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { observer } from "mobx-react-lite";
 import { rootStore } from "./stores";
 import { GlobalStyles } from "@/styles/base";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { LeftSidebar } from "@/components/LeftSidebar";
 import { Workspace } from "@/components/Workspace";
+import { Autorization } from "./Pages/Auth/Autorization";
+import { Registration } from "./Pages/Auth/Registration";
 import { Header } from "@/components/Header";
 import { Wrapper, MainWrapper } from "./style";
 
@@ -45,6 +47,14 @@ const Links = [
     identifier: "help",
     name: "Помощь",
   },
+  {
+    identifier: "auth",
+    name: "Регистрация",
+  },
+  {
+    identifier: "auth",
+    name: "Регистрация",
+  },
 ];
 
 const App = observer(() => {
@@ -60,15 +70,31 @@ const App = observer(() => {
     }
   });
 
+  const [logged, setlogged] = useState(false); // need update with business logic
+
   return (
     <Router>
       <GlobalStyles />
       <Wrapper>
-        <LeftSidebar links={Links} />
-        <MainWrapper>
-          <Header />
-          <Workspace />
-        </MainWrapper>
+        {logged ? (
+          <>
+            <LeftSidebar links={Links} />
+            <MainWrapper>
+              <Header />
+              <Workspace />
+            </MainWrapper>
+          </>
+        ) : (
+          <>
+            {" "}
+            <Route path="/auth">
+              <Autorization />
+            </Route>
+            <Route path="/registration">
+              <Registration />
+            </Route>
+          </>
+        )}
       </Wrapper>
     </Router>
   );

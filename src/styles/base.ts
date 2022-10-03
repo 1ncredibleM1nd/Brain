@@ -39,7 +39,7 @@ export const GlobalStyles = createGlobalStyles`
 
     body {
       margin: 0;
-      background: #F5F5F5;
+      background: #F8F9FF;
     }
 
     input[type="text"] {
