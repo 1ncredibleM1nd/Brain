@@ -2,7 +2,11 @@ import { styled } from "goober";
 import { Palette } from "@/styles/constants";
 
 export const Wrapper = styled("div")`
+  display: flex;
+  flex-direction: column;
   max-width: 313px;
+  max-height: 400px;
+  margin-top: 14px;
   padding: 26px;
   box-shadow: 0 10px 60px rgba(226, 236, 249, 0.5);
   border-radius: 20px;
@@ -50,12 +54,18 @@ export const Name = styled("span")`
 export const HardSkills = styled("span")`
   display: block;
   max-width: 182px;
+  margin-bottom: 14px;
   color: ${Palette.gray};
 `;
 
 export const Actions = styled("div")`
   display: flex;
   align-items: center;
+  margin-top: auto;
+
+  & :first-child {
+    margin-right: 6px;
+  }
 `;
 
 export const Info = styled("span")<{ color: string }>`

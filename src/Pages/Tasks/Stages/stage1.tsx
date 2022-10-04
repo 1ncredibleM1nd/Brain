@@ -1,6 +1,5 @@
 import { BlockHeader } from "@/styles/typography";
 import { Input } from "@/ui/Input";
-import { StyledPicker } from "@/ui/DatePicker";
 import { ButtonWrapper } from "@/Pages/Tasks/style";
 import { Button } from "@/ui/Button";
 import { TProps } from "@/Pages/Tasks/Stages/types";
@@ -10,7 +9,7 @@ export const Stage1 = ({ incrementStage, decrementStage }: TProps) => {
   return (
     <>
       <BlockHeader>Информация о проекте</BlockHeader>
-      <Input name="project-name" label="Название проекта" />
+      <Input name="project-name" label="Название проекта" required />
       <Input name="budget" label="Бюджет проекта" />
       <ButtonWrapper>
         <Button type="primary" size="md" onClick={() => incrementStage()}>

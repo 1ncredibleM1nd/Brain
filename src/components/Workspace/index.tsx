@@ -4,7 +4,6 @@ import { Switch, Route } from "react-router-dom";
 import { Projects } from "@/Pages/Projects";
 import { Messages } from "@/Pages/Messages";
 import { Freelancers } from "@/Pages/Freelancers";
-import { Notifications } from "@/Pages/Notifications";
 import { Documents } from "@/Pages/Documents";
 import { Cabinet } from "@/Pages/Cabinet";
 import { Finances } from "@/Pages/Finances";
@@ -24,9 +23,6 @@ export const Workspace = () => {
         </Route>
         <Route path="/freelancers">
           <Freelancers />
-        </Route>
-        <Route path="/notifications">
-          <Notifications />
         </Route>
         <Route path="/documents">
           <Documents />

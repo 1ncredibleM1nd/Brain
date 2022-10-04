@@ -14,7 +14,7 @@ export const Header = () => {
   return (
     <Wrapper>
       <Button type="secondary" size="sm" onClick={() => redirect()}>
-        Создать задачу
+        Создать проект
       </Button>
       <ActionsWrapper>
         <NotificationWrapper>

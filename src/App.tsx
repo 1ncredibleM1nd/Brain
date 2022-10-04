@@ -24,10 +24,6 @@ const Links = [
     name: "Фрилансеры",
   },
   {
-    identifier: "notifications",
-    name: "Уведомления",
-  },
-  {
     identifier: "documents",
     name: "Документы",
   },
@@ -46,14 +42,6 @@ const Links = [
   {
     identifier: "help",
     name: "Помощь",
-  },
-  {
-    identifier: "auth",
-    name: "Регистрация",
-  },
-  {
-    identifier: "auth",
-    name: "Регистрация",
   },
 ];
 

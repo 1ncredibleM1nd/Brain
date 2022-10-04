@@ -26,7 +26,7 @@ export const Card = ({ ...props }: TProps) => {
   return (
     <Wrapper>
       <AvatarWrapper>
-        <Avatar name="Сергей Иванов" size={96} round img={avatar}></Avatar>
+        <Avatar name={userName} size={96} round img={avatar}></Avatar>
       </AvatarWrapper>
       <Params>
         <ParamWrapper>
@@ -42,7 +42,7 @@ export const Card = ({ ...props }: TProps) => {
       <HardSkills>{profession}</HardSkills>
       <Actions>
         <Button type="primary">Выбрать</Button>
-        <Button type="secondary">В профиль</Button>
+        <Button type="secondary">Профиль</Button>
       </Actions>
     </Wrapper>
   );
