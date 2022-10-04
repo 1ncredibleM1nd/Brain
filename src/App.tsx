@@ -70,7 +70,7 @@ const App = observer(() => {
     }
   });
 
-  const [logged, setlogged] = useState(false); // need update with business logic
+  const [logged, setlogged] = useState(true); // need update with business logic
 
   return (
     <Router>
@@ -86,7 +86,6 @@ const App = observer(() => {
           </>
         ) : (
           <>
-            {" "}
             <Route path="/auth">
               <Autorization />
             </Route>

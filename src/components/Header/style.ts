@@ -1,6 +1,6 @@
 import { styled } from "goober";
 import { Palette } from "@/styles/constants";
-import Avatar from "@/components/Header/User/Avatar";
+import Avatar from "@/components/general/Avatar";
 
 export const Wrapper = styled("div")`
   width: auto;

@@ -1,24 +1,50 @@
-import React from "react";
-import { PageHeader, BlockHeader } from "@/styles/typography";
-import { ButtonWrapper } from "./style";
-import { Input } from "@/ui/Input";
-import { Button } from "@/ui/Button";
+import React, { useState } from "react";
+import { PageHeader } from "@/styles/typography";
+import { Stage1 } from "@/Pages/Tasks/Stages/stage1";
+import { Stage2 } from "@/Pages/Tasks/Stages/stage2";
+import { Stage3 } from "@/Pages/Tasks/Stages/stage3";
+import { Stage4 } from "@/Pages/Tasks/Stages/stage4";
 
 export const Tasks = () => {
+  const [stage, setStage] = useState(4);
+
+  const incrementStage = () => {
+    setStage(stage + 1);
+  };
+
+  const decrementStage = () => {
+    setStage(stage - 1);
+  };
+
   return (
     <div>
       <PageHeader>Создать задачу</PageHeader>
-      <BlockHeader>Информация о проекте</BlockHeader>
-      <Input name="project-name" label="Название проекта" />
-      <Input name="budget" label="Бюджет проекта" />
-      <ButtonWrapper>
-        <Button type="primary" size="md">
-          Продолжить
-        </Button>
-        <Button type="secondary" size="md">
-          Отменить
-        </Button>
-      </ButtonWrapper>
+
+      {stage === 1 && (
+        <Stage1
+          incrementStage={incrementStage}
+          decrementStage={decrementStage}
+        />
+      )}
+      {stage === 2 && (
+        <Stage2
+          incrementStage={incrementStage}
+          decrementStage={decrementStage}
+        />
+      )}
+      {stage === 3 && (
+        <Stage3
+          incrementStage={incrementStage}
+          decrementStage={decrementStage}
+        />
+      )}
+
+      {stage === 4 && (
+        <Stage4
+          incrementStage={incrementStage}
+          decrementStage={decrementStage}
+        />
+      )}
     </div>
   );
 };

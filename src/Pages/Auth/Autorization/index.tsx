@@ -1,6 +1,6 @@
 import { Icon } from "@/ui/Icon";
 import React from "react";
-import { Wrapper } from "./style";
+import { Wrapper, ImgWrapper } from "./style";
 
 export const Autorization = () => {
   return (
@@ -8,7 +8,7 @@ export const Autorization = () => {
       <div>
         <Icon name="logo-mini" width={28} height={22} />
       </div>
-      <div></div>
+      <ImgWrapper />
     </Wrapper>
   );
 };

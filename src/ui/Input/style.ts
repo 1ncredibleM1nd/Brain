@@ -8,14 +8,17 @@ export const Wrapper = styled("div")`
 `;
 
 export const StyledInput = styled("input")`
+  max-width: 600px;
   padding: 0 14px 0 14px;
   border-radius: 8px;
   height: 46px;
+  outline: none;
   border: 1px solid ${Palette.gray2};
 `;
 
 export const StyledLabel = styled("label")`
   font-size: 14px;
+  max-width: 600px;
   font-weight: 500;
   margin-bottom: 4px;
   color: ${Palette.gray};

@@ -1,9 +1,9 @@
-import { FC, InputHTMLAttributes } from "react";
+import { FC, InputHTMLAttributes, ReactNode } from "react";
 import { Wrapper, StyledLabel, StyledInput } from "./style";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
-  label: string;
+  label: string | ReactNode;
 }
 
 export const Input: FC<InputProps> = ({ name, label, ...props }) => {

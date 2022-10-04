@@ -13,3 +13,5 @@ import "./messages-icon.svg";
 import "./exit-icon.svg";
 import "./arrow-down-icon.svg";
 import "./logo-mini.svg";
+import "./likes-icon.svg";
+import "./ruble-icon.svg";

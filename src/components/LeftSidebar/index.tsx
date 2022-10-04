@@ -16,7 +16,9 @@ type TProps = {
 export const LeftSidebar = ({ links }: TProps) => {
   return (
     <Wrapper>
-      <Icon name={"logo"} width={145} height={40} />
+      <div>
+        <Icon name={"logo"} width={145} height={40} />
+      </div>
       <LinksWrapper>
         {links.map(link => (
           <Link to={`/${link.identifier}`}>
