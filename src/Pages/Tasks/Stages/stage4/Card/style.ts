@@ -22,10 +22,14 @@ export const AvatarWrapper = styled("div")`
 export const Params = styled("div")`
   display: flex;
   align-items: center;
+
+  & :first-child {
+    margin-right: 6px;
+  }
 `;
 
 export const ParamWrapper = styled("div")`
-  max-width: 100px;
+  max-width: 120px;
   height: 45px;
   display: flex;
   align-items: center;
@@ -34,9 +38,29 @@ export const ParamWrapper = styled("div")`
   background: ${Palette.gray3};
 `;
 
-export const Info = styled("span")<{ color: string }>`
+export const Name = styled("span")`
   display: block;
-  margin-left: 6px;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: ${Palette.black};
+  font-size: 18px;
+`;
+
+export const HardSkills = styled("span")`
+  display: block;
+  max-width: 182px;
+  color: ${Palette.gray};
+`;
+
+export const Actions = styled("div")`
+  display: flex;
+  align-items: center;
+`;
+
+export const Info = styled("span")<{ color: string }>`
+  word-wrap: break-word;
+  font-weight: 500;
 
   ${({ color }) =>
     color &&

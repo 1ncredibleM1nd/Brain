@@ -1,6 +1,16 @@
-import { Wrapper, AvatarWrapper, Params, ParamWrapper, Info } from "./style";
+import {
+  Wrapper,
+  AvatarWrapper,
+  Params,
+  ParamWrapper,
+  Info,
+  Name,
+  HardSkills,
+  Actions,
+} from "./style";
 import { Icon } from "@/ui/Icon";
 import Avatar from "@/components/general/Avatar";
+import { Button } from "@/ui/Button";
 import { Palette } from "@/styles/constants";
 
 type TProps = {
@@ -28,6 +38,12 @@ export const Card = ({ ...props }: TProps) => {
           <Info color={Palette.violet}>от {price}</Info>
         </ParamWrapper>
       </Params>
+      <Name>{userName}</Name>
+      <HardSkills>{profession}</HardSkills>
+      <Actions>
+        <Button type="primary">Выбрать</Button>
+        <Button type="secondary">В профиль</Button>
+      </Actions>
     </Wrapper>
   );
 };

@@ -3,6 +3,7 @@ import { default as ReactAvatar } from "react-avatar";
 import { colors } from "./colors";
 import { getInitials } from "./helpers";
 import { Wrapper } from "./style";
+import { Palette } from "@/styles/constants";
 
 type TProps = {
   name?: string;
@@ -27,7 +28,7 @@ const Avatar = ({
   const initials = getInitials(name ?? "NaN");
   const avatarSize = size?.toString();
   // @ts-ignore
-  const avatarColor = ReactAvatar.getRandomColor(initials, colors);
+  const avatarColor = ReactAvatar.getRandomColor(initials, Palette);
 
   if (img && !fallback) {
     return (
