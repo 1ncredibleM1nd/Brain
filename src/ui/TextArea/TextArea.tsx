@@ -1,8 +1,4 @@
-import React, {
-  useImperativeHandle,
-  useRef,
-  TextareaHTMLAttributes,
-} from "react";
+import React, { useImperativeHandle, useRef } from "react";
 import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
 import { useState } from "react";

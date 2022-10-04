@@ -30,21 +30,21 @@ export const SvgWrapper = styled("div")<{ active: boolean; onlyIcon: boolean }>`
   align-items: center;
   border-radius: 4px;
   margin-right: 10px;
-  background: ${Palette.white};
-  border: 1px ${Palette.gray2} solid;
+  background: ${Palette.white1};
+  border: 1px ${Palette.gray3} solid;
 
   ${({ active }) =>
     active &&
-    ` background: ${Palette.gray1};
-    border: unset;`}
+    ` background: ${Palette.violet};
+       border: unset;`}
 
   ${({ onlyIcon }) => onlyIcon && `margin-right: 0;`}
 `;
 
 export const StyledIcon = styled(Icon)`
-  height: 10px;
+  height: 12px;
   width: 10px;
-  fill: ${Palette.white};
+  fill: ${Palette.white1};
 `;
 
 export const Text = styled("div")`
