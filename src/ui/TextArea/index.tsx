@@ -2,11 +2,7 @@ import React, { useImperativeHandle, useRef } from "react";
 import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
 import { useState } from "react";
-import {
-  Wrapper,
-  StyledTextArea,
-  ScrollWrapper,
-} from "@/ui/TextArea/TextArea.style";
+import { Wrapper, StyledTextArea, ScrollWrapper } from "@/ui/TextArea/style";
 
 type TProps = {
   placeholder?: string;

@@ -16,3 +16,4 @@ import "./logo-mini.svg";
 import "./likes-icon.svg";
 import "./ruble-icon.svg";
 import "./check-icon.svg";
+import "./active-radio-icon.svg";

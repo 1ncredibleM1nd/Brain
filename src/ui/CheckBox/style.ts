@@ -21,7 +21,11 @@ export const Input = styled("input")`
   white-space: nowrap;
 `;
 
-export const SvgWrapper = styled("div")<{ active: boolean; onlyIcon: boolean }>`
+export const SvgWrapper = styled("div")<{
+  active: boolean;
+  onlyIcon: boolean;
+  radio?: boolean;
+}>`
   height: 20px;
   width: 20px;
   display: flex;
@@ -31,11 +35,19 @@ export const SvgWrapper = styled("div")<{ active: boolean; onlyIcon: boolean }>`
   border-radius: 4px;
   margin-right: 10px;
   background: ${Palette.white1};
-  border: 1px ${Palette.gray3} solid;
+  border: 1px ${Palette.gray} solid;
 
-  ${({ active }) =>
+  ${({ radio }) => radio && `border-radius: 50%;`}
+
+  ${({ active, radio }) =>
     active &&
-    ` background: ${Palette.violet};
+    radio &&
+    ` background: ${Palette.white1};
+       `}
+  ${({ active, radio }) =>
+    active &&
+    !radio &&
+    `background: ${Palette.violet};
        border: unset;`}
 
   ${({ onlyIcon }) => onlyIcon && `margin-right: 0;`}

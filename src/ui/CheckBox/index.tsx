@@ -5,17 +5,28 @@ import { CheckBoxWrapper, Input, SvgWrapper, StyledIcon, Text } from "./style";
 type TProps = {
   value?: boolean;
   label?: string;
+  radio?: boolean;
   children?: ReactNode;
   onChange?: (value: boolean) => void;
 };
 
-export const CheckBox = observer(
-  ({ value = false, label, children, onChange }: TProps) => {
+export const Checkbox = observer(
+  ({ value = false, label, children, onChange, radio }: TProps) => {
     return (
       <CheckBoxWrapper onChange={() => onChange?.(!value)}>
         <Input type="checkbox" defaultChecked={value} />
-        <SvgWrapper active={value} onlyIcon={!(label || children)}>
-          {value && <StyledIcon name="check-icon" width={12} height={10} />}
+        <SvgWrapper
+          radio={radio}
+          active={value}
+          onlyIcon={!(label || children)}
+        >
+          {value && (
+            <StyledIcon
+              name={radio ? "active-radio-icon" : "check-icon"}
+              width={radio ? 12 : 10}
+              height={radio ? 12 : 10}
+            />
+          )}
         </SvgWrapper>
         <Text>{label || children}</Text>
       </CheckBoxWrapper>

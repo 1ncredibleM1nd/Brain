@@ -5,6 +5,7 @@ import { Wrapper } from "./style";
 import { Button } from "@/ui/Button";
 import { ButtonWrapper } from "@/Pages/Tasks/style";
 import React from "react";
+import { Checkbox } from "@/ui/CheckBox";
 
 const data = [
   {
@@ -40,7 +41,8 @@ const data = [
 export const Stage4 = ({ incrementStage, decrementStage }: TProps) => {
   return (
     <>
-      <BlockHeader>Выберите исполнителя </BlockHeader>
+      <BlockHeader>Выберите подходящий способ оплаты и исполнителя</BlockHeader>
+      <Checkbox label={"Что-то там сделать"} value={"Что-то там"} />
       <Wrapper>
         {data.map(({ avatar, rating, price, userName, profession }) => {
           return (
