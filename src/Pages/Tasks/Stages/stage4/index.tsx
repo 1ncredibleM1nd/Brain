@@ -1,10 +1,11 @@
+import React from "react";
 import { TProps } from "@/Pages/Tasks/Stages/types";
 import { Card } from "@/Pages/Tasks/Stages/stage4/Card";
 import { BlockHeader } from "@/styles/typography";
 import { Wrapper } from "./style";
 import { Button } from "@/ui/Button";
 import { ButtonWrapper } from "@/Pages/Tasks/style";
-import React from "react";
+import { BlockDescription } from "@/styles/typography";
 import { Checkbox } from "@/ui/CheckBox";
 
 const data = [
@@ -42,7 +43,23 @@ export const Stage4 = ({ incrementStage, decrementStage }: TProps) => {
   return (
     <>
       <BlockHeader>Выберите подходящий способ оплаты и исполнителя</BlockHeader>
-      <Checkbox label={"Что-то там сделать"} value={"Что-то там"} />
+      <Checkbox radio label={"Сделка без риска"} value={"Что-то там"} />
+      <BlockDescription>
+        Оплата банковской картой с гарантией возврата и компенсацией
+        материального ущерба до 10 000 ₽. Комиссия 11% + 35 ₽. <br />
+        <a href="#">Подробнее</a>
+      </BlockDescription>
+      <Checkbox
+        radio
+        label={"Оплата с закрывающими документами"}
+        value={"Что-то там"}
+      />
+      <BlockDescription>
+        Откликнутся только юридические лица, ИП или самозанятые. Вы платите с
+        расчётного счета компании и получаете закрывающие документы от
+        исполнителя.
+      </BlockDescription>
+
       <Wrapper>
         {data.map(({ avatar, rating, price, userName, profession }) => {
           return (

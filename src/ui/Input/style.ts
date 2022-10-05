@@ -19,9 +19,9 @@ export const StyledInput = styled("input")`
 export const StyledLabel = styled("label")<{ required?: boolean }>`
   position: relative;
   font-size: 14px;
+  margin-bottom: 4px;
   max-width: 600px;
   font-weight: 500;
-  margin-bottom: 4px;
   color: ${Palette.gray};
 
   & :first-child::after {

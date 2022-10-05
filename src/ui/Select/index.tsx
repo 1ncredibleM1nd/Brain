@@ -5,7 +5,7 @@ import {
   StyledMultiValueLabel,
   StyledMultiValueRemove,
 } from "@/ui/Select/style";
-import { Wrapper } from "@/ui/Select/style";
+import { Wrapper, Label } from "@/ui/Select/style";
 import {
   Props as ReactSelectProps,
   OptionProps as ReactOptionProps,
@@ -16,6 +16,7 @@ import {
 type TProps = {
   shadow?: boolean;
   likeDropdown?: boolean;
+  label?: string;
 } & ReactSelectProps<any>;
 type TPropsOption = ReactOptionProps<any>;
 type TPropsMultiValueGeneric = ReactMultiValueGenericProps<any>;
@@ -27,17 +28,22 @@ const menuConfig = {
 };
 
 export const Select = observer(
-  ({ likeDropdown = false, shadow = false, ...props }: TProps) => {
+  ({ likeDropdown = false, shadow = false, label, ...props }: TProps) => {
     return (
-      <Wrapper shadow={shadow} isDropdown={likeDropdown}>
-        <StyledReactSelect
-          menuPortalTarget={document.body}
-          menuPosition="fixed"
-          styles={menuConfig}
-          classNamePrefix={"Select"}
-          {...props}
-        />
-      </Wrapper>
+      <>
+        <Label>{label}</Label>
+        <Wrapper shadow={shadow} isDropdown={likeDropdown}>
+          <StyledReactSelect
+            menuPortalTarget={document.body}
+            placeholder={"Не выбрано"}
+            noOptionsMessage={() => <p>Нет опций</p>}
+            menuPosition="fixed"
+            styles={menuConfig}
+            classNamePrefix={"Select"}
+            {...props}
+          />
+        </Wrapper>
+      </>
     );
   },
 );

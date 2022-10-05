@@ -6,6 +6,7 @@ export const CheckBoxWrapper = styled("label")`
   width: fit-content;
   cursor: pointer;
   margin-bottom: 0;
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   align-content: flex-start;
@@ -62,5 +63,6 @@ export const StyledIcon = styled(Icon)`
 export const Text = styled("div")`
   font-size: 14px;
   line-height: 20px;
+  color: ${Palette.gray};
   text-transform: capitalize;
 `;

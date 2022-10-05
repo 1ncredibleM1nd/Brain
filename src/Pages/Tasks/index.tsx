@@ -8,7 +8,7 @@ import { Stage4 } from "@/Pages/Tasks/Stages/stage4";
 import { ProgressBar } from "@/ui/ProgressBar";
 
 export const Tasks = () => {
-  const [stage, setStage] = useState(4);
+  const [stage, setStage] = useState(1);
 
   const incrementStage = () => {
     setStage(stage + 1);

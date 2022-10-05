@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import { CheckBoxWrapper, Input, SvgWrapper, StyledIcon, Text } from "./style";
 
 type TProps = {
-  value?: boolean;
+  value?: boolean | string;
   label?: string;
   radio?: boolean;
   children?: ReactNode;

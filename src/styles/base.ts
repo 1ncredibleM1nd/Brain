@@ -29,6 +29,8 @@ export const GlobalStyles = createGlobalStyles`
    html {
       box-sizing: border-box;
       font-family: "Inter", sans-serif !important;
+      overflow: hidden;
+      height: 100%;
     }
 
     *,
@@ -40,6 +42,7 @@ export const GlobalStyles = createGlobalStyles`
     body {
       margin: 0;
       background: #F8F9FF;
+      height: 100%;
     }
 
     input[type="text"] {
