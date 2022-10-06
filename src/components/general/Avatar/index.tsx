@@ -32,12 +32,7 @@ const Avatar = ({
 
   if (img && !fallback) {
     return (
-      <Wrapper
-        round={round}
-        style={{
-          borderColor: statusColor || "rgba(0,0,0,0)",
-        }}
-      >
+      <Wrapper round={round} borderColor="white">
         <img
           src={img}
           height={size}
@@ -50,10 +45,7 @@ const Avatar = ({
   }
 
   return (
-    <Wrapper
-      round={round}
-      style={{ borderColor: statusColor || "transparent" }}
-    >
+    <Wrapper round={round} borderColor="white">
       <ReactAvatar
         size={avatarSize}
         name={initials}

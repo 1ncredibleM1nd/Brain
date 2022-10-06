@@ -22,7 +22,7 @@ export const LinksWrapper = styled("div")`
 `;
 
 export const ExitWrapper = styled("div")`
-  margin-top: 220px;
+  margin-top: auto;
 
   & > a {
     text-decoration: none;

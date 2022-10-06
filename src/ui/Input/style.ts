@@ -32,3 +32,10 @@ export const StyledLabel = styled("label")<{ required?: boolean }>`
           color: ${Palette.error};`}
   }
 `;
+
+export const Description = styled("span")`
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: ${Palette.gray};
+`;

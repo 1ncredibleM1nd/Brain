@@ -42,22 +42,6 @@ export const ParamWrapper = styled("div")`
   background: ${Palette.gray3};
 `;
 
-export const Name = styled("span")`
-  display: block;
-  margin-top: 14px;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: ${Palette.black};
-  font-size: 18px;
-`;
-
-export const HardSkills = styled("span")`
-  display: block;
-  max-width: 182px;
-  margin-bottom: 14px;
-  color: ${Palette.gray};
-`;
-
 export const Actions = styled("div")`
   display: flex;
   align-items: center;

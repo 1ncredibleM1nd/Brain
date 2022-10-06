@@ -4,10 +4,9 @@ import {
   Params,
   ParamWrapper,
   Info,
-  Name,
-  HardSkills,
   Actions,
 } from "./style";
+import { Name, HardSkills } from "@/styles/typography";
 import { Icon } from "@/ui/Icon";
 import Avatar from "@/components/general/Avatar";
 import { Button } from "@/ui/Button";

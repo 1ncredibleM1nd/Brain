@@ -5,10 +5,10 @@ import { GlobalStyles } from "@/styles/base";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { LeftSidebar } from "@/components/LeftSidebar";
 import { Workspace } from "@/components/Workspace";
-import { Authorization } from "./Pages/Auth/Authorization";
 import { Registration } from "./Pages/Auth/Registration";
 import { Header } from "@/components/Header";
 import { Wrapper, MainWrapper } from "./style";
+import { Auth } from "@/Pages/Auth";
 
 const Links = [
   {
@@ -75,7 +75,7 @@ const App = observer(() => {
         ) : (
           <>
             <Route path="/auth">
-              <Authorization />
+              <Auth />
             </Route>
             <Route path="/registration">
               <Registration />

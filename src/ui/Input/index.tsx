@@ -1,19 +1,23 @@
 import { FC, InputHTMLAttributes, ReactNode } from "react";
-import { Wrapper, StyledLabel, StyledInput } from "./style";
+import { Wrapper, StyledLabel, StyledInput, Description } from "./style";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   label: string | ReactNode;
-  required?: boolean;
+  description?: string;
 }
 
-export const Input: FC<InputProps> = ({ name, label, required, ...props }) => {
+export const Input: FC<InputProps> = ({
+  name,
+  label,
+  description,
+  ...props
+}) => {
   return (
     <Wrapper>
-      <StyledLabel required={required} htmlFor={name}>
-        {label}
-      </StyledLabel>
+      <StyledLabel htmlFor={name}>{label}</StyledLabel>
       <StyledInput {...props} id={name} />
+      <Description>{description}</Description>
     </Wrapper>
   );
 };

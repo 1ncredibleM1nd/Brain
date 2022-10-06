@@ -17,6 +17,7 @@ export type TIconProps = {
   name: string;
   size?: TIconSize;
   interactive?: boolean;
+  asButton?: boolean;
   className?: string;
 } & SVGProps<SVGSVGElement>;
 
@@ -26,6 +27,7 @@ export const Icon = observer(
     height = 18,
     name,
     fill,
+    asButton,
     size,
     interactive = false,
     ...svgProps
@@ -34,7 +36,12 @@ export const Icon = observer(
     const iconHeight = size ? IconSize[size] : height;
 
     return (
-      <svg {...svgProps} width={`${iconWidth}px`} height={`${iconHeight}px`}>
+      <svg
+        style={{ cursor: asButton ? "pointer" : "auto" }}
+        {...svgProps}
+        width={`${iconWidth}px`}
+        height={`${iconHeight}px`}
+      >
         <use href={`#${name}`} fill={fill} />
       </svg>
     );
