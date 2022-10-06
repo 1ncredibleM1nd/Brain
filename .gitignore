@@ -7,4 +7,4 @@ dist_backup
 .DS_Store
 npm-debug.log
 size-plugin.json
-.package-json.lock
+.package-lock.json
